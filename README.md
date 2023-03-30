@@ -44,28 +44,26 @@
 
 ### Пример без оповещений и имен  
 
-
 https://user-images.githubusercontent.com/24192051/228794958-ef1d03ed-b4c1-4aa2-b465-f53b124e2f10.mp4
-
 
 https://www.dropbox.com/s/npsgmpw7kfhghe5/example-without-notifications.mkv?dl=0
 
 ### Пример с оповещениями от мэтчей захардкоденных имен и работой команд исключений
 
-
+https://user-images.githubusercontent.com/24192051/228914611-3873e465-28d4-4ccc-8663-599de41e17b9.mp4
 
 https://www.dropbox.com/s/h19iqwiacil2dw9/example-with-notifications.mkv?dl=0  
 
 ### Пример с оповещениями от мэтчей актуального имени по профилю и работой команд исключений
-
-
-
 (там в процессе парсинга серверов игрок Gunner сменил сервер, поэтому исключение по серверу для него не отработало — или точнее — сервер сам сменил порт)  
+
+https://user-images.githubusercontent.com/24192051/228914205-ab9bcc36-3c08-4452-b52a-81cb97c9c27c.mp4
+
 https://www.dropbox.com/s/5gbe6piyzlq1vr5/example-with-links_options.mp4?dl=0
 
 ### Пример с оповещениями от мэтчей текущей игры статуса профиля со списком INGAMES
 
-
+https://user-images.githubusercontent.com/24192051/228916046-d64a082f-af5b-464e-83f3-9bd0453976cb.mp4
 
 https://www.dropbox.com/s/w3jis57khocqe6h/example-ingame.mkv?dl=0
 
