@@ -40,19 +40,23 @@
 1. Запустить arun.bat для асинхронной версии, srun.bat — для синхронной
 
 ## Примеры работы
-По-идее, тут должны быть встроенные гитхабом видео, но проверить локально не могу. Возможно, они окажутся простыми ссылками на видео.
+По-идее, тут должны быть встроенные гитхабом видео, но проверить локально не могу. Возможно, тут будут только простые ссылки на видео.
 
 ### Пример без оповещений и имен  
-https://www.dropbox.com/s/npsgmpw7kfhghe5/example-without-notifications.mkv?dl=0  
+<video src='res/example-without-notifications.mp4' width=180/>
+https://www.dropbox.com/s/npsgmpw7kfhghe5/example-without-notifications.mkv?dl=0
 
 ### Пример с оповещениями от мэтчей захардкоденных имен и работой команд исключений
+<video src='res/example-with-notifications.mp4' width=180/>
 https://www.dropbox.com/s/h19iqwiacil2dw9/example-with-notifications.mkv?dl=0  
 
 ### Пример с оповещениями от мэтчей актуального имени по профилю и работой команд исключений
+<video src='res/example-with-links_options.mp4' width=180/>
 (там в процессе парсинга серверов игрок Gunner сменил сервер, поэтому исключение по серверу для него не отработало — или точнее — сервер сам сменил порт)  
 https://www.dropbox.com/s/5gbe6piyzlq1vr5/example-with-links_options.mp4?dl=0
 
 ### Пример с оповещениями от мэтчей текущей игры статуса профиля со списком INGAMES
+<video src='res/example-ingame.mp4' width=180/>
 https://www.dropbox.com/s/w3jis57khocqe6h/example-ingame.mkv?dl=0
 
 ## Парсинг имён
