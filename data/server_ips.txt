@@ -1,0 +1,4 @@
+functioning master_server_querier is enough to work and filling this text document is not required.
+localhost:27015 comment (can be anything)
+localhost:27015 server1 info info info
+localhost:27016 server2

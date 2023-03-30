@@ -1,0 +1,45 @@
+{
+    "MAIN": {
+        "HARDCODED_NAMES": [
+            // "name",
+            // "er"
+        ], // Use this in case when you don't have a reliable Steam account link. (uncomment "er" to test)
+        "MINIMUM_CYCLE_PERIOD": 60, // in secs. This is needed so servers won't ignore your requests when you're sending them too fast
+        "MINIMUM_SLEEP_TIME": 10 // if a cycle finished quickly enough — it's unused. See main.py code for details.
+        // "CYCLES_PER_LOG": 10 // all logs functionality is uncommented
+    },
+    "SERVER_PARSERS": {
+        "MAX_FAILS_CON": 2, // max consecutive timeouts
+        "TIMEOUT_TIME": 5, // in seconds
+        // note that for async server parser it's a max for initial network ops
+        // Absoulute max is theoretically 2 times bigger since sleep from main is async
+        // and the sleeping coro can unblock and send red retry request with low enough MAX_REQUESTS_PER_SECOND value (50 ex.)
+        "MAX_REQUESTS_PER_SECOND": 200
+    },
+    "SERVER_NAME_PARSERS": {
+        "MAX_FAILS_CON": 2, // max consecutive fails for one server. If zero only sync would work and it will also behave like it's equal to one.
+        "INFO_TIMEOUT_TIME": 5 // a2s.ainfo timeout time
+    },
+    "NAME_PARSERS": {
+        "MAX_FAILS_CON": 2, // max consecutive fails for requesting one steam account link
+        "TIMEOUT_TIME": 5, // max timeout time = MAX_FAILS_CON * TIMEOUT_TIME
+        // notify when a steam account is in these games if possible. All Steam games should work as long as the titles are correct.
+        "INGAMES": [
+            "Counter-Strike: Source",
+            "Team Fortress 2",
+            "Garry's Mod",
+            "Euro Truck Simulator 2",
+            "Destiny 2" // any game works here
+        ]
+    },
+    "MASTER_SERVER_QUERIER": {
+        "MAX_PACKETS_PER_REQUEST": 2,
+        // "FILTER": "\\gamedir\\tf" // gamedirs might be [csgo, tf, rust, dayz, ... etc] // note that filters must be valid or it will not work
+        "FILTER": "", //  keep in mind that servers from other games might still leak in packets for some reason
+        "REGION": "ALL", // possible region codes are defined in master_server_querier.py
+        "MASTER_SERVER_ADDR": [
+            "hl2master.steampowered.com",
+            27011
+        ]
+    }
+}

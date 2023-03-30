@@ -1,0 +1,7 @@
+// HJSON supports comments and stuff. This document contains steam account links and flags: {"steam_account_url": {"flag1": true, "flag2": false}}
+// At least ONE name entry either here or in HARDCODED_NAMES config option is required for the program to work
+// upd. seems that i've made it work regardless of ^
+{
+    // "https://steamcommunity.com/profiles/76561197960265735": {"on_server": true, "in_game": true},   # both of these types of links
+    // "https://steamcommunity.com/id/name":                    {"on_server": true, "in_game": true},   # work
+}
