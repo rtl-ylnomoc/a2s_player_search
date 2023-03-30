@@ -43,16 +43,30 @@
 По-идее, тут должны быть встроенные гитхабом видео, но проверить локально не могу. Возможно, тут будут только простые ссылки на видео.
 
 ### Пример без оповещений и имен  
+
+
+https://user-images.githubusercontent.com/24192051/228794958-ef1d03ed-b4c1-4aa2-b465-f53b124e2f10.mp4
+
+
 https://www.dropbox.com/s/npsgmpw7kfhghe5/example-without-notifications.mkv?dl=0
 
 ### Пример с оповещениями от мэтчей захардкоденных имен и работой команд исключений
+
+
+
 https://www.dropbox.com/s/h19iqwiacil2dw9/example-with-notifications.mkv?dl=0  
 
 ### Пример с оповещениями от мэтчей актуального имени по профилю и работой команд исключений
+
+
+
 (там в процессе парсинга серверов игрок Gunner сменил сервер, поэтому исключение по серверу для него не отработало — или точнее — сервер сам сменил порт)  
 https://www.dropbox.com/s/5gbe6piyzlq1vr5/example-with-links_options.mp4?dl=0
 
 ### Пример с оповещениями от мэтчей текущей игры статуса профиля со списком INGAMES
+
+
+
 https://www.dropbox.com/s/w3jis57khocqe6h/example-ingame.mkv?dl=0
 
 ## Парсинг имён
