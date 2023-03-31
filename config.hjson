@@ -35,7 +35,7 @@
     "MASTER_SERVER_QUERIER": {
         "MAX_PACKETS_PER_REQUEST": 2,
         // "FILTER": "\\gamedir\\tf" // gamedirs might be [csgo, tf, rust, dayz, ... etc] // note that filters must be valid or it will not work
-        "FILTER": "", //  keep in mind that servers from other games might still leak in packets for some reason
+        "FILTER": "", //  keep in mind that servers from other games might still leak in packets if you didn't clear server_ips cache in data/
         "REGION": "ALL", // possible region codes are defined in master_server_querier.py
         "MASTER_SERVER_ADDR": [
             "hl2master.steampowered.com",
