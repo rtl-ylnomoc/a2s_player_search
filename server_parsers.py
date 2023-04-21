@@ -20,6 +20,7 @@ from time import sleep, asctime
 
 from rich.traceback import install
 from rich.table import Table
+from rich.markup import MarkupError
 
 from helpers import CONFIG, CONSOLE, addr_to_ip, remove_diacritics
 from notifications import notify_onserver
@@ -157,10 +158,15 @@ class SyncServerParser(AbstractServerParser):
             players_table.add_row(remove_diacritics(player_name), str(player_score), playtime, f'{player_score*60/player_duration:.2f}')
             self.handle_player(names_on_server, server_name, addr,
                                playtime=playtime, player_name=player_name, player_score=player_score)
-
-        CONSOLE.print(players_table, end='\n\n')
+        try:
+            CONSOLE.print(players_table, end='\n\n')
+        except MarkupError:         # names with forward slashes may cause this error
+            CONSOLE.print('\t\t\t\tBAD NAME ON SERVER', style="red on white")
         if names_on_server:
-            CONSOLE.print(names_on_server)
+            try:
+                CONSOLE.print(names_on_server)
+            except MarkupError:     # names with forward slashes may cause this error
+                CONSOLE.print('\t\t\t\tBAD NAME ON SERVER', style="red on white")
             notify_onserver(self.excluded_servers_names_map, names_on_server, server_name, addr)
         return None
 
@@ -205,7 +211,10 @@ class AsyncServerParser(AbstractServerParser):
                                playtime=playtime, player_name=player_name, player_score=player_score, player_duration=player_duration)
         # console.print(players_table)
         if names_on_server:
-            CONSOLE.print(server_name, addr, names_on_server)
+            try:
+                CONSOLE.print(server_name, addr, names_on_server)
+            except MarkupError:
+                CONSOLE.print('BAD SERVER NAME OR NAMES ON SERVER', addr)
             notify_onserver(self.excluded_servers_names_map, names_on_server, server_name, addr)
         return players_table
 
@@ -229,7 +238,10 @@ class AsyncServerParser(AbstractServerParser):
             # sleep(self.request_cooldown)
         players_tables = [pt for pt in await asyncio.gather(*tasks) if pt]
         for players_table in sorted(players_tables, key=lambda x: len(x.rows), reverse=False):
-            CONSOLE.print(players_table)
+            try:
+                CONSOLE.print(players_table)
+            except MarkupError:     # names with forward slashes may cause this error
+                CONSOLE.print('\t\t\t\tBAD NAME ON SERVER', style="red on white")
         return self.names_on_all_servers
 
 
